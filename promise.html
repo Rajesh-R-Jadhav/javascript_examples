@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Promise </title>
+<style>
+    
+</style>
+</head>
+<body>
+
+<script>
+/*    
+    The Promise object represents the eventual completion (or failure) of an asynchronous 
+    operation, and its resulting value.    
+    
+    ===== Syntax
+    //new Promise( // executor // function(resolve, reject) { ... } );
+
+    The executor normally initiates some asynchronous work, and then, 
+    once that completes, either calls the resolve function to resolve the promise 
+    or else rejects it if an error occurred.
+    If an error is thrown in the executor function, 
+    the promise is rejected. The return value of the executor is ignored.
+
+    A Promise is a proxy for a value not necessarily known when the promise is created. 
+    It allows you to associate/add handlers with an asynchronous action's 
+    eventual success value or failure reason. 
+
+    This lets asynchronous methods return values like synchronous methods: 
+    instead of immediately returning the final value, 
+    the asynchronous method returns a promise to supply the value 
+    at some point in the future.
+
+    =====A Promise is in one of these states:
+
+    pending: initial state, neither fulfilled nor rejected.
+    fulfilled: meaning that the operation completed successfully.
+    rejected: meaning that the operation failed.
+
+    =====Properties
+    Promise.length
+            Length property whose value is always 1 (number of constructor arguments).
+    Promise.prototype
+            Represents the prototype for the Promise constructor.
+*/
+
+//Promise Constructor
+var promise1 = new Promise(function(resolve, reject) {
+  setTimeout(resolve, 1000, 'foo');
+});
+
+console.log(promise1);
+// expected output: [object Promise]
+
+//Promise.all()
+var promise1 = Promise.resolve(3);
+var promise2 = 42;
+var promise3 = new Promise(function(resolve, reject) {
+  setTimeout(resolve, 100, 'foo');
+});
+
+Promise.all([promise1, promise2, promise3]).then(function(values) {
+  console.log(values);
+});
+// expected output: Array [3, 42, "foo"]
+
+    
+</script>    
+</body>
+</html>
+
