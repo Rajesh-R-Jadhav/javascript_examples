@@ -1,0 +1,28 @@
+Backups/
+Cache/
+CachedData/
+CachedExtensions/
+Cookies
+Cookies-journal
+Network Persistent State
+User/
+dom/Backups/
+dom/Cache/
+dom/CachedData/
+dom/CachedExtensions/
+dom/Cookies
+dom/Cookies-journal
+dom/Network Persistent State
+dom/User/
+dom/languagepacks.json
+dom/logs/
+dom/machineid
+dom/rapid_render.json
+dom/storage.json
+index.html
+index.js
+languagepacks.json
+logs/
+machineid
+rapid_render.json
+storage.json
