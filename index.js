@@ -1,5 +1,3 @@
-let buttonElement1 = document.getElementById('button1')
-
 document.getElementById('button1').addEventListener('click', myFunction);
 
 function myFunction() {
@@ -20,7 +18,6 @@ function myFunction() {
     console.log("lastChild: ", document.getElementById('div1').lastChild);
 
     // Traversal left and right
-    console.log("previousSibling: ", document.getElementById('h1_1').previousSibling);
     console.log("previousSibling: ", document.getElementById('h1_1').previousSibling.innerText);
 
     console.log("nextSibling: ", document.getElementById('h1_1').nextSibling.innerHTML);
