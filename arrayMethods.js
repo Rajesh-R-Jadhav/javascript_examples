@@ -264,14 +264,32 @@ common.addEndLine();
 
 // push - add elements to array
 const todoItems = [1, 2, 3, 4, 5];
-let itemsIncremented =[];
-for(let i=0; i<todoItems.length; i++){
-    itemsIncremented.push(todoItems[i]+1);
+let itemsIncremented = [];
+for (let i = 0; i < todoItems.length; i++) {
+    itemsIncremented.push(todoItems[i] + 1);
 }
 // alternative 1
 // itemsIncremented = todoItems.map(x => x + 1);
-// alternative 2
-itemsIncremented = [...todoItems, 7]
-console.log('push ', itemsIncremented);
 
-// 
+// alternative 2
+// itemsIncremented = [...todoItems, 7]
+// console.log('push ', itemsIncremented);
+
+// splice - accetps 2 params number of elements & from index ,
+const months = ['January', 'February', 'March', 'April', ' May']
+// With splice
+console.log('splice:', months.splice(2, 5)); // remove one element at index 2 & returns reomved elements
+common.addEndLine();
+
+// shift - removes the first element of an array and returns it
+// [5, 4, 3, 2, 1]
+numbers.shift()
+console.log('numbers:', numbers) 
+common.addEndLine();
+
+// unshift - add 1 or more elements to begining of array 
+numbers.unshift(1)
+console.log('numbers:', numbers) 
+common.addEndLine();
+
+
