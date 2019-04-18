@@ -9,6 +9,7 @@
 
 # Be careful
 - The spread operator, slice returns a shallow copy of that portion!
+- Mutating original array methods- sort, fill, reverse, pop
 
 # Vesions
 ES1: June 1997 

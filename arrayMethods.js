@@ -213,3 +213,65 @@ console.log(participantsFormatted1) // gary, emma
 common.addEndLine();
 
 // from
+// This is a static method that creates a new Array from an array-like or iterable object 
+// like a string for example. It can be useful when you’re working with the dom.
+// const nodes = document.querySelectorAll('.todo-item') // this is an instance of NodeList, you can't use array methods with it
+// const todoItems = Array.from(nodes) // now, you can use map, filter, etc. as you're workin with an array!
+
+// isArray -  static method - it tells you if the passed value is an array or not.
+console.log('isArray:', Array.isArray(potentialParticipants)); // true
+common.addEndLine();
+
+// sort 
+// The default sorting method transforms all the elements into strings 
+// and sort them alphabetically
+const names = ['john', 'mary', 'gary', 'anna'];
+names.sort();
+console.log('sort string array: ', names);
+common.addEndLine();
+
+// sort numbers
+const numArr = [1, 489, 100, 574, 45];
+numArr.sort((a, b) => a - b);
+console.log('sort number array: ', numArr);
+common.addEndLine();
+
+// fill 
+// modifies or fills all the elements of an array from a start index to an end index 
+// with a static value.
+function fakeUser() {
+    return {
+        id: 'fe38',
+        name: 'thomas',
+    }
+}
+
+const posts = Array(3).fill(fakeUser());
+console.log('fill: ', posts);
+common.addEndLine();
+
+// reverse - reverses the array
+// [1, 2, 3, 4, 5]
+numbers.reverse();
+console.log('reverse:', numbers); // [5, 4, 3, 2, 1]
+common.addEndLine();
+
+// pop - removes last element & returns array
+// [5, 4, 3, 2, 1]
+numbers.pop();
+console.log('pop:', numbers); // [5, 4, 3, 2]
+common.addEndLine();
+
+// push - add elements to array
+const todoItems = [1, 2, 3, 4, 5];
+let itemsIncremented =[];
+for(let i=0; i<todoItems.length; i++){
+    itemsIncremented.push(todoItems[i]+1);
+}
+// alternative 1
+// itemsIncremented = todoItems.map(x => x + 1);
+// alternative 2
+itemsIncremented = [...todoItems, 7]
+console.log('push ', itemsIncremented);
+
+// 
