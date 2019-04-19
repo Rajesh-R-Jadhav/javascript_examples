@@ -103,7 +103,7 @@ console.log('findIndex - result -', numbers1.findIndex((v) => v === 2));
 // while the first parameter of findIndex is a callback function.
 common.addEndLine();
 
-// slice (shallow copy)
+// slice (shallow copy) - copy an array
 const arr = ['foo', 42, { name: 'Thomas' }]
 let copy = [...arr]
 
@@ -275,21 +275,26 @@ for (let i = 0; i < todoItems.length; i++) {
 // itemsIncremented = [...todoItems, 7]
 // console.log('push ', itemsIncremented);
 
-// splice - accetps 2 params number of elements & from index ,
+// splice - accetps params as index , number of elements to add/remove & in add case pass elements to add
 const months = ['January', 'February', 'March', 'April', ' May']
-// With splice
-console.log('splice:', months.splice(2, 5)); // remove one element at index 2 & returns reomved elements
+// remove elements
+months.splice(2, 3); // remove 2 element starting from index 2 & returns removed elements
+console.log('splice- remove:', months); 
+
+// [ 'January', 'February' ]
+months.splice(2, 1, 'March'); // remove 2 element starting from index 2 & returns removed elements
+console.log('splice- add:', months); 
 common.addEndLine();
 
-// shift - removes the first element of an array and returns it
-// [5, 4, 3, 2, 1]
-numbers.shift()
-console.log('numbers:', numbers) 
+// shift - removes the first element of an array & returns the removed element
+// [5, 4, 3, 2]
+numbers.shift();
+console.log('shift:', numbers)
 common.addEndLine();
 
-// unshift - add 1 or more elements to begining of array 
+// unshift - add 1 or more elements to begining of array & returns the removed element
+// [4, 3, 2]
 numbers.unshift(1)
-console.log('numbers:', numbers) 
+console.log('unshift:', numbers)
 common.addEndLine();
-
 
