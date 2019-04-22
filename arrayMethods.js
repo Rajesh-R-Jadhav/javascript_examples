@@ -279,11 +279,11 @@ for (let i = 0; i < todoItems.length; i++) {
 const months = ['January', 'February', 'March', 'April', ' May']
 // remove elements
 months.splice(2, 3); // remove 2 element starting from index 2 & returns removed elements
-console.log('splice- remove:', months); 
+console.log('splice- remove:', months);
 
 // [ 'January', 'February' ]
 months.splice(2, 1, 'March'); // remove 2 element starting from index 2 & returns removed elements
-console.log('splice- add:', months); 
+console.log('splice- add:', months);
 common.addEndLine();
 
 // shift - removes the first element of an array & returns the removed element
@@ -298,3 +298,6 @@ numbers.unshift(1)
 console.log('unshift:', numbers)
 common.addEndLine();
 
+// Array.of() method creates a new Array instance from a number of arguments
+console.log('Array.of: ', Array.of(2));
+common.addEndLine();
